@@ -13,8 +13,9 @@ class RecentProjectsOrganizer: ProjectActivity {
             .forEach {
                 val recentProject: ReopenProjectAction = it as ReopenProjectAction
 
-                return recentProject
+                // TODO: Add your logic to organize recent projects here
+                // For example, you could sort, filter, or modify the recent projects list
+                println("Found recent project: ${recentProject.projectPath}")
             }
-        }
     }
 }

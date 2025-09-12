@@ -27,6 +27,21 @@ Use the IDE's built-in plugin system:
 
 Or go to the [plugin page]() on the [JetBrains](https://www.jetbrains.com)-website, download the archive-file and install manually.
 
+## Development
+
+To try the plugin during development:
+
+```
+./gradlew runIde
+```
+
+This will:
+
+* Build your plugin
+* Launch a new IntelliJ IDEA instance with your plugin installed
+* Allow you to test your plugin in a real environment
+
+
 ## License
 
 Please read the [license](LICENSE) file.
