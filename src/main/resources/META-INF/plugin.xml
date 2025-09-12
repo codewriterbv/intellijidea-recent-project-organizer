@@ -1,0 +1,16 @@
+<idea-plugin>
+    <id>be.codewriter.recent_projects_organizer</id>
+    <name>Recent Projects Organizer</name>
+
+    <vendor
+        email="intellij@codewriter.be"
+        url="https://codewriter.be">
+        CodeWriter bv
+    </vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="be.codewriter.recent_projects_organizer.RecentProjectsOrganizer"/>
+    </extensions>
+</idea-plugin>
