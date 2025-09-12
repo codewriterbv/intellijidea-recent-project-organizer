@@ -26,7 +26,6 @@ New "File" option added by this plugin: "Recent Projects (Organized)":
 
 ![Recent Projects Organized](screenshots/recent-projects-organized.png)
 
-
 ## Installation
 
 **NOT AVAILABLE YET**
@@ -37,7 +36,7 @@ Use the IDE's built-in plugin system:
 * search for: `Recent Projects Organizer`
 * click the `Install`-button
 
-Or go to the [plugin page]() on the [JetBrains](https://www.jetbrains.com)-website, download the archive-file and install manually.
+Or go to the [plugin page](https://plugins.jetbrains.com/plugin/28455-recent-projects-organizer) on the [JetBrains](https://www.jetbrains.com)-website, download the archive-file and install manually.
 
 ## Development
 
