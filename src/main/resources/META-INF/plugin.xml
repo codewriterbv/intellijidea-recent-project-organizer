@@ -3,14 +3,14 @@
     <name>Recent Projects Organizer</name>
 
     <vendor
-        email="intellij@codewriter.be"
-        url="https://codewriter.be">
+            email="intellij@codewriter.be"
+            url="https://codewriter.be">
         CodeWriter bv
     </vendor>
 
     <description><![CDATA[
         A plugin to organize and manage the "Recent Projects" list in IntelliJ IDEA.
-        This plugin helps you keep your recent projects organized and easily accessible.
+        This plugin provides an organized tree structure grouped by the first word of project names.
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
@@ -18,4 +18,15 @@
     <extensions defaultExtensionNs="com.intellij">
         <postStartupActivity implementation="be.codewriter.recent_projects_organizer.RecentProjectsOrganizer"/>
     </extensions>
+
+    <actions>
+        <!-- Add "Recent Projects (Organized)" to the "File" menu -->
+        <group id="OrganizedRecentProjectsSubmenu"
+                class="be.codewriter.recent_projects_organizer.OrganizedRecentProjectsSubmenu"
+                text="Recent Projects (Organized)"
+                description="Recent projects organized by first word in submenu"
+               popup="true">
+            <add-to-group group-id="FileMenu" anchor="first"/>
+        </group>
+    </actions>
 </idea-plugin>

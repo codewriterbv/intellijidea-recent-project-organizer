@@ -14,6 +14,18 @@
 
 ## Description
 
+This plugin groups the recent projects by the first word in their (display)
+name by "space", "-", "_", or ". When multiple projects have the same first
+word, they are grouped in a sub-group.
+
+Existing "Recent Projects":
+
+![Recent Projects](screenshots/recent-projects.png)
+
+New "File" option added by this plugin: "Recent Projects (Organized)":
+
+![Recent Projects Organized](screenshots/recent-projects-organized.png)
+
 
 ## Installation
 
@@ -40,6 +52,12 @@ This will:
 * Build your plugin
 * Launch a new IntelliJ IDEA instance with your plugin installed
 * Allow you to test your plugin in a real environment
+
+To debug the plugin:
+
+* Via Gradle Tool Window
+* Navigate to: Tasks → intellij → runIde
+* Right-click on runIde → Debug 'runIde'
 
 
 ## License
