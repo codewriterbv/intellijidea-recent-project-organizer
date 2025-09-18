@@ -1,9 +1,7 @@
 # Recent Projects Organizer
 
-> A plugin for the IntelliJ platform to organize the list in "Recent Projects".
+A plugin for the IntelliJ platform to organize the list in "Recent Projects".
 > 
-> **WORK IN PROGRESS**
-
 ## Table of Contents
 
 * [Description](#description)
@@ -25,8 +23,6 @@ New "File" option added by this plugin: "Recent Projects (Organized)":
 ![Recent Projects Organized](screenshots/recent-projects-organized.png)
 
 ## Installation
-
-**NOT AVAILABLE YET**
 
 Use the IDE's built-in plugin system:
 
@@ -56,14 +52,13 @@ To debug the plugin:
 * Navigate to: Tasks → intellij → runIde
 * Right-click on runIde → Debug 'runIde'
 
-
 ## License
 
 Please read the [license](LICENSE) file.
 
 ## Credits
 
-
+Created by [Frank Delporte](https://www.linkedin.com/in/frankdelporte/) for [CodeWriter bv](https://codewriter.be/) as an open-source project.
 
 ## Donate
 
