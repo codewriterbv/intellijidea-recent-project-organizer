@@ -29,9 +29,11 @@ class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Orga
             } else {
                 // Create a subgroup for multiple projects
                 val subGroup = DefaultActionGroup(groupName, true)
-                projects.forEach { project ->
-                    subGroup.add(createProjectAction(project))
-                }
+                projects
+                    .sortedBy { it.displayName }
+                    .forEach { project ->
+                        subGroup.add(createProjectAction(project))
+                    }
                 add(subGroup)
             }
         }

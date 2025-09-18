@@ -14,7 +14,7 @@
     ]]></description>
 
     <icons>
-        <icon id="be.codewriter.recent_projects_organizer" href="menu.svg"/>
+        <icon id="be.codewriter.recent_projects_organizer" href="menu.svg" dark="menu_dark.svg"/>
     </icons>
 
     <depends>com.intellij.modules.platform</depends>
