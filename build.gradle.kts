@@ -33,6 +33,7 @@ dependencies {
         zipSigner()
         testFramework(TestFrameworkType.Platform)
     }
+    testImplementation(kotlin("test"))
 }
 
 kotlin {

@@ -5,7 +5,6 @@ import com.intellij.ide.ReopenProjectAction
 import com.intellij.openapi.actionSystem.*
 import com.intellij.openapi.project.ProjectManager
 import java.io.File
-import java.nio.file.Paths
 
 class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Organized)", true) {
 
@@ -61,15 +60,17 @@ class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Orga
     }
 
     private fun getFirstWord(projectInfo: ProjectInfo): String {
-        val firstWord = projectInfo.displayName
+        return getFirstWord(projectInfo.displayName)
+    }
+
+    fun getFirstWord(text: String): String {
+        val firstWord = text
             .split(Regex("[\\s\\-_.]"))
             .firstOrNull { it.isNotBlank() }
-            ?.lowercase()
-            ?: "Other"
+            ?: ""
 
-        val result = firstWord.replaceFirstChar { it.uppercase() }
-        println("getFirstWord('$projectInfo.name') -> '$result'") 
-        return result
+        println("getFirstWord('$text') -> '$firstWord'")
+        return firstWord
     }
 
     private fun createProjectAction(projectInfo: ProjectInfo): AnAction {

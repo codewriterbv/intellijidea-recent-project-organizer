@@ -14,9 +14,7 @@
 
 ## Description
 
-This plugin groups the recent projects by the first word in their (display)
-name by "space", "-", "_", or ". When multiple projects have the same first
-word, they are grouped in a sub-group.
+This plugin groups the recent projects by the first word in their (display) name by space, "-", "_", or ". When multiple projects have the same first word, they are grouped in a sub-group.
 
 Existing "Recent Projects":
 
