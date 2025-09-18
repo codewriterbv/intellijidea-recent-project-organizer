@@ -13,6 +13,10 @@
         This plugin provides an organized tree structure grouped by the first word of project names.
     ]]></description>
 
+    <icons>
+        <icon id="be.codewriter.recent_projects_organizer" href="menu.svg"/>
+    </icons>
+
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">

@@ -1,7 +1,11 @@
 # Recent Projects Organizer
 
 A plugin for the IntelliJ platform to organize the list in "Recent Projects".
-> 
+
+Detailed info is available in [this blog post](https://webtechie.be/post/2025-09-18-jetbrains-intellijidea-plugin-recent-project-organizer/).
+
+[![Watch the demo](https://img.youtube.com/vi/d0j_PVqXxRc/0.jpg)](https://www.youtube.com/watch?v=d0j_PVqXxRc)
+
 ## Table of Contents
 
 * [Description](#description)
