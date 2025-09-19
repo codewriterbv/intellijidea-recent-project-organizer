@@ -30,7 +30,7 @@ class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Orga
                 // Create a subgroup for multiple projects
                 val subGroup = DefaultActionGroup(groupName, true)
                 projects
-                    .sortedBy { it.displayName }
+                    .sortedBy { it.displayName.lowercase() }
                     .forEach { project ->
                         subGroup.add(createProjectAction(project))
                     }
@@ -58,7 +58,7 @@ class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Orga
     private fun organizeProjectsByFirstWord(projects: List<ProjectInfo>): Map<String, List<ProjectInfo>> {
         return projects
             .groupBy { getFirstWord(it) }
-            .toSortedMap()
+            .toSortedMap(String.CASE_INSENSITIVE_ORDER)
     }
 
     private fun getFirstWord(projectInfo: ProjectInfo): String {
