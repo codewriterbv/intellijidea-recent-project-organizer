@@ -2,26 +2,28 @@ package be.codewriter.recent_projects_organizer
 
 import com.intellij.ide.RecentProjectListActionProvider
 import com.intellij.ide.ReopenProjectAction
-import com.intellij.openapi.actionSystem.*
+import com.intellij.openapi.actionSystem.AnAction
+import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.project.ProjectManager
 import java.io.File
 
 class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Organized)", true) {
 
     override fun update(e: AnActionEvent) {
-        println("OrganizedRecentProjectsSubmenu.update() called") 
+        println("OrganizedRecentProjectsSubmenu.update() called")
         removeAll()
 
         // Get recent projects and organize them
         val recentProjects = getRecentProjects()
-        println("Found ${recentProjects.size} recent projects for submenu") 
+        println("Found ${recentProjects.size} recent projects for submenu")
 
         val organizedProjects = organizeProjectsByFirstWord(recentProjects)
-        println("Organized into ${organizedProjects.size} groups for submenu") 
+        println("Organized into ${organizedProjects.size} groups for submenu")
 
         // Create subgroups for each first word
         organizedProjects.forEach { (groupName, projects) ->
-            println("Group '$groupName' has ${projects.size} projects") 
+            println("Group '$groupName' has ${projects.size} projects")
 
             if (projects.size == 1) {
                 // If only one project, add it directly
@@ -40,7 +42,7 @@ class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Orga
     }
 
     private fun getRecentProjects(): List<ProjectInfo> {
-        println("Getting recent projects for submenu...") 
+        println("Getting recent projects for submenu...")
 
         return RecentProjectListActionProvider
             .getInstance()
@@ -55,9 +57,12 @@ class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Orga
             }
     }
 
-    private fun organizeProjectsByFirstWord(projects: List<ProjectInfo>): Map<String, List<ProjectInfo>> {
+    fun organizeProjectsByFirstWord(projects: List<ProjectInfo>): Map<String, List<ProjectInfo>> {
         return projects
             .groupBy { getFirstWord(it) }
+            .mapValues { (_, projectList) ->
+                projectList.sortedBy { it.displayName.lowercase() }
+            }
             .toSortedMap(String.CASE_INSENSITIVE_ORDER)
     }
 
@@ -70,9 +75,8 @@ class OrganizedRecentProjectsSubmenu : DefaultActionGroup("Recent Projects (Orga
             .split(Regex("[\\s\\-_.]"))
             .firstOrNull { it.isNotBlank() }
             ?: ""
-
         println("getFirstWord('$text') -> '$firstWord'")
-        return firstWord
+        return firstWord.lowercase()
     }
 
     private fun createProjectAction(projectInfo: ProjectInfo): AnAction {
