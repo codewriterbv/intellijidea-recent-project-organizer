@@ -6,14 +6,6 @@ Detailed info is available in [this blog post](https://webtechie.be/post/2025-09
 
 [![Watch the demo](https://img.youtube.com/vi/d0j_PVqXxRc/0.jpg)](https://www.youtube.com/watch?v=d0j_PVqXxRc)
 
-## Table of Contents
-
-* [Description](#description)
-* [Installation](#installation)
-* [License](#license)
-* [Credits](#credits)
-* [Donate](#donate)
-
 ## Description
 
 This plugin groups the recent projects by the first word in their (display) name by space, "-", "_", or ".". When multiple projects have the same first word, they are grouped in a sub-group.
@@ -25,6 +17,14 @@ Existing "Recent Projects":
 New "File" option added by this plugin: "Recent Projects (Organized)":
 
 ![Recent Projects Organized](screenshots/recent-projects-organized.png)
+
+### Existing Functionality in IntelliJ IDEA
+
+This plugin adds an extra option to the "File" menu, but thanks to [Marit van Dijk](https://github.com/mlvandijk), I learned some similar functionality is available by default in IntelliJ IDEA. 
+
+* Click on the name of the project you are working on, and you will get a list with Open and Recent projects. Start typing while this list is open, and the list will be filtered.
+* In general, most menus of IntelliJ IDEA are searchable, just start typing...
+* In the documentation: [Navigate projects on the Welcome screen](https://www.jetbrains.com/help/idea/open-close-and-move-projects.html#navigate-welcome-screen)
 
 ## Installation
 
