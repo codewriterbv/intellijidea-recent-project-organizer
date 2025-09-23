@@ -2,13 +2,15 @@
 
 A plugin for the IntelliJ platform to organize the list in "Recent Projects".
 
-Detailed info is available in [this blog post](https://webtechie.be/post/2025-09-18-jetbrains-intellijidea-plugin-recent-project-organizer/).
+Detailed info is available
+in [this blog post](https://webtechie.be/post/2025-09-18-jetbrains-intellijidea-plugin-recent-project-organizer/).
 
 [![Watch the demo](https://img.youtube.com/vi/d0j_PVqXxRc/0.jpg)](https://www.youtube.com/watch?v=d0j_PVqXxRc)
 
 ## Description
 
-This plugin groups the recent projects by the first word in their (display) name by space, "-", "_", or ".". When multiple projects have the same first word, they are grouped in a sub-group.
+This plugin groups the recent projects by the first word in their (display) name by space, "-", "_", or ".". When
+multiple projects have the same first word, they are grouped in a sub-group.
 
 Existing "Recent Projects":
 
@@ -20,11 +22,16 @@ New "File" option added by this plugin: "Recent Projects (Organized)":
 
 ### Existing Functionality in IntelliJ IDEA
 
-This plugin adds an extra option to the "File" menu, but thanks to [Marit van Dijk](https://github.com/mlvandijk), I learned some similar functionality is available by default in IntelliJ IDEA. 
+This plugin adds an extra option to the "File" menu, but thanks to [Marit van Dijk](https://github.com/mlvandijk), I
+learned some similar functionality is available by default in IntelliJ IDEA.
 
-* Click on the name of the project you are working on, and you will get a list with Open and Recent projects. Start typing while this list is open, and the list will be filtered.
+* Shift + Shift > Manage Projects > You can search in this list and create groups. You can also create a custom shortcut
+  to open this menu more quickly.
+* Click on the name of the project you are working on, and you will get a list with Open and Recent projects. Start
+  typing while this list is open, and the list will be filtered.
 * In general, most menus of IntelliJ IDEA are searchable, just start typing...
-* In the documentation: [Navigate projects on the Welcome screen](https://www.jetbrains.com/help/idea/open-close-and-move-projects.html#navigate-welcome-screen)
+* In the
+  documentation: [Navigate projects on the Welcome screen](https://www.jetbrains.com/help/idea/open-close-and-move-projects.html#navigate-welcome-screen)
 
 ## Installation
 
@@ -34,7 +41,8 @@ Use the IDE's built-in plugin system:
 * search for: `Recent Projects Organizer`
 * click the `Install`-button
 
-Or go to the [plugin page](https://plugins.jetbrains.com/plugin/28455-recent-projects-organizer) on the [JetBrains](https://www.jetbrains.com)-website, download the archive-file and install manually.
+Or go to the [plugin page](https://plugins.jetbrains.com/plugin/28455-recent-projects-organizer) on
+the [JetBrains](https://www.jetbrains.com)-website, download the archive-file and install manually.
 
 ## Development
 
@@ -62,7 +70,8 @@ Please read the [license](LICENSE) file.
 
 ## Credits
 
-Created by [Frank Delporte](https://www.linkedin.com/in/frankdelporte/) for [CodeWriter bv](https://codewriter.be/) as an open-source project.
+Created by [Frank Delporte](https://www.linkedin.com/in/frankdelporte/) for [CodeWriter bv](https://codewriter.be/) as
+an open-source project.
 
 ## Donate
 
